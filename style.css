@@ -415,7 +415,9 @@
  }
 
  .package-details {
+     font-family: 'Cormorant Garamond', serif;
      display: flex;
+     color: black;
      flex-direction: column;
      gap: .3rem;
      margin-bottom: .7rem;
@@ -451,8 +453,9 @@
  }
 
  .service-description {
+    font-family: 'Cormorant Garamond', serif;
      font-size: .82rem;
-     color: var(--tm);
+     color: black;
      margin-bottom: 1.3rem;
      line-height: 1.65;
  }
@@ -469,33 +472,35 @@
      color: var(--tl);
      margin-bottom: .5rem;
  }
-.contact {
+
+ .contact {
      background: var(--wh);
  }
- 
+
  .contact-content {
      max-width: 660px;
      margin: 0 auto;
      text-align: center;
  }
- 
+
  .contact-content .section-divider {
      margin: 1rem auto;
  }
- 
+
  .contact-content p {
+     font-family: 'Cormorant Garamond', serif;
      font-size: .93rem;
-     color: var(--tm);
+     color: black;
      margin-bottom: 2.5rem;
  }
- 
+
  .contact-links {
      display: flex;
      justify-content: center;
      gap: 2rem;
      flex-wrap: wrap;
  }
- 
+
  .contact-link {
      font-size: .77rem;
      letter-spacing: .15em;
@@ -506,12 +511,12 @@
      padding-bottom: 2px;
      transition: color .25s, border-color .25s;
  }
- 
+
  .contact-link:hover {
      color: var(--ya);
      border-color: var(--ya);
  }
- 
+
  .contact-link-icon {
      display: inline-flex;
      align-items: center;
@@ -523,25 +528,25 @@
      letter-spacing: .12em;
      transition: all .3s;
  }
- 
+
  .contact-link-icon svg {
      flex-shrink: 0;
      color: var(--ya);
      transition: color .3s;
  }
- 
+
  .contact-link-icon:hover {
      background: var(--ya);
      border-color: var(--ya);
      color: var(--wh);
  }
- 
+
  .contact-link-icon:hover svg {
      color: var(--wh);
  }
- 
+
  .contact-note {
- 
+
      max-width: 480px;
      font-size: .72rem;
      line-height: 1.45;
@@ -667,17 +672,20 @@
 
  /* 4-es mini galéria stílusa */
  .service-gallery {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     grid-template-rows: 1fr 1fr;
-     gap: 12px;
-     height: 100%;
-     min-height: 300px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: center;
+     align-content: flex-start;
+     gap: 6px;
  }
 
+
+
  .gallery-item {
-     width: 100%;
-     height: 150px;
+     width: calc(50% - 6px);
+     height: auto;
+     aspect-ratio: 4 / 3;
      background: var(--blush);
      border-radius: 2px;
      overflow: hidden;
@@ -686,9 +694,11 @@
  }
 
  .gallery-item img {
+     display: block;
      width: 100%;
      height: 100%;
      object-fit: cover;
+     object-position: center;
      opacity: 0.8;
      transition: opacity 0.3s ease;
  }
@@ -701,6 +711,14 @@
      opacity: 1;
  }
 
+ .gallery-item.portrait {
+     aspect-ratio: 3 / 4;
+ }
+
+ .gallery-item.portrait img {
+     object-fit: cover;
+ }
+
  /* Reszponzivitás: Mobilon egymás alá kerülnek */
  @media (max-width: 900px) {
      .horizontal-card {
@@ -710,14 +728,11 @@
      }
 
      .service-gallery {
-         order: -1;
-         /* Mobilon a kép legyen felül */
-         height: 350px;
+         gap: 4px;
      }
 
-     .gallery-item {
-         height: 170px;
-     }
+
+
  }
 
  /* Dekoráció a galéria köré */
@@ -730,6 +745,28 @@
      pointer-events: none;
  }
 
+ .service-group-h {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+ }
+
+ .service-gallery>.gallery-item.portrait,
+ .service-gallery>.service-group-h {
+     width: calc(50% - 3px);
+ }
+
+ .service-group-h .gallery-item {
+     width: 100%;
+ }
+
+ @media (max-width: 900px) {
+
+     .service-gallery>.gallery-item.portrait,
+     .service-gallery>.service-group-h {
+         width: 100%;
+     }
+ }
 
 
 
