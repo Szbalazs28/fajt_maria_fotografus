@@ -30,9 +30,9 @@
 
  h2 {
      font-family: 'Cormorant Garamond', serif;
-     font-size: clamp(1.5rem, 3vw, 2.5rem);
+     font-size: 2vw;
      font-weight: 300;
-     line-height: 1.2;
+     line-height: 1;
      color: var(--td);
      margin-bottom: 1.5rem;
  }
@@ -96,6 +96,7 @@
  }
 
  .nav-links {
+    font-family: 'Cormorant Garamond', serif;
      display: flex;
      gap: 2rem;
      list-style: none;
@@ -166,12 +167,12 @@
  }
 
  .hero-content {
-     position: relative;
+  
      z-index: 1;
  }
 
  #leiras {
-     font-size: 20px;
+     font-size: 1.5vw;
      font-family: 'Cormorant Garamond', serif;
      color: black;
 
@@ -201,13 +202,27 @@
  }
 
  .hero p {
-     font-size: .93rem;
      color: var(--tm);
      font-weight: 400;
      max-width: 420px;
      margin-bottom: 2.5rem;
  }
 
+ .herodiv{
+    width: 50%;
+ }
+
+ .hero-img{
+    width: 70%;
+    height: auto;
+     display: block;
+ }
+
+ .hero-img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
  .cta-button {
      display: inline-block;
      padding: .85rem 2.5rem;
