@@ -459,6 +459,10 @@
     font-size: 1.3em;
  }
 
+ #contact-des{
+    font-size: 1.2em;
+ }
+
  .package-details div {
      display: flex;
      align-items: flex-start;
@@ -890,14 +894,14 @@
 
 .pf-item{
     width: 23%;
-    height: auto;
+    height: 38vh;
     display: block;
 }
 
 @media (max-width: 900px) {
     .pf-item{
         width: 48%;
-        height: auto;
+        height: 38vh;
     }
 }
 
