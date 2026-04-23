@@ -137,7 +137,7 @@
      min-height: 100vh;
      display: flex;
      align-items: center;
-     padding: 0 5vw;
+     padding-top: 0 5vw;
      background: linear-gradient(135deg, var(--cream) 0%, var(--yl) 55%, var(--blush) 100%);
      position: relative;
      overflow: hidden;
@@ -637,6 +637,8 @@
      color: var(--ya);
  }
 
+
+
  .mobile-menu-close {
      position: absolute;
      top: 1.5rem;
@@ -683,17 +685,24 @@
 
  }
 
- @media (max-width: 720px) {
-     .service-card {
-         width: 100%;
-     }
- }
+ 
 
  @media (max-width: 1040px) {
      .service-card {
          width: 48%;
+         
      }
+
  }
+
+ .hero-img-mobil {
+     display: none;
+     width: 60%;
+     height: auto;
+ }
+
+ 
+ 
 
  .behuzas {
      text-indent: 1.5em;
@@ -918,4 +927,73 @@
      width: 65%;
      height: 65%;
      object-fit: contain;
+ }
+
+ @media (max-width: 760px) {
+    .service-card {
+         width: 100%;
+         
+     }   
+     .hero {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        /* Változtasd auto-ra, hogy csak akkora legyen, mint a tartalom */
+        height: auto; 
+        min-height: auto; 
+        /* Adj neki egy kis extra alsó paddingot a gomb/kép alá */
+        padding-bottom: 4rem; 
+        padding-top: 8rem; /* Hogy ne csússzon a fix menü alá */
+    }
+
+    .cta-button{
+        max-width: 100vw;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    .kamera-ikon {
+        width: 9vw;
+        height: auto;
+    }
+
+    .kameras-elvalaszto {
+        width: 100%;
+        height: 1.5px;
+    }
+
+    .kamera {
+        width: 12vw;
+        max-height: 7vh;
+        
+    }
+
+    
+
+    .hero-content {
+        width: 100%;
+        height: auto;
+        /* Középre igazítja a szöveget és a gombot mobilon */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .hero-img-mobil {
+        display: block; /* 'flex' helyett 'block' szerencsésebb */
+        width: 80%; /* Lehet kicsit nagyobb mobilon */
+        max-height: none; /* Ne korlátozd a magasságot, ha sok a hely */
+        margin:  auto ;
+    }
+     #leiras{
+        font-size: 1.1rem;
+     }
+     .hero-content h2{
+        font-size: 1.8rem;
+     }
+     
+     .hero-img-div {
+         display: none;
+     }
  }
