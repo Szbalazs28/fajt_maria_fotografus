@@ -997,3 +997,77 @@
          display: none;
      }
  }
+
+ /* Süti banner stílusa */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%; /* Alapértelmezetten rejtve */
+    left: 0;
+    right: 0;
+    background: rgba(253, 246, 244, 0.98); /* --cream variáció */
+    border-top: 1px solid var(--ym);
+    padding: 1.5rem 5vw;
+    z-index: 9999;
+    transition: bottom 0.5s ease-in-out;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cookie-banner.show {
+    bottom: 0;
+}
+
+.cookie-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cookie-content p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--td);
+    line-height: 1.4;
+}
+
+.cookie-btn {
+    padding: 0.6rem 2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--ya);
+    color: var(--wh);
+    border: 1px solid var(--ya);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cookie-btn:hover {
+    background: transparent;
+    color: var(--td);
+}
+
+/* Mobil optimalizálás */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .cookie-banner {
+        padding: 1.5rem 8vw;
+    }
+}
+
+.tovabba{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--td);
+    line-height: 1.4;
+    margin-top: 1rem;
+}
